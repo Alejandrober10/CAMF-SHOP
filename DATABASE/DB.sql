@@ -1,0 +1,1 @@
+SELECT * FROM CLAMF_prueba.CLAMF;
