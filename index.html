@@ -25,22 +25,22 @@
     <main class="contenedor">
         <br>
         <section>
-            <form class="formulario">
+            <form action="DATABASE/conexion_login.php" class="formulario" method="POST">
                 <fieldset>
                     <div class="contenedor-campos">
                         <div class="campo">
-                            <label>Usuario </label>
-                            <input class="input-text" type="text" placeholder="Tu Nombre">
+                            <label>Usuario</label>
+                            <input class="input-text" name="Usuario" type="text" placeholder="Tu Nombre">
                         </div>
                         <div class="campo">
                             <label>Contraseña </label>
-                            <input class="input-text" type="tel" placeholder="Tu Telefono">
+                            <input class="input-text" name="Contraseña" type="password" placeholder="Tu Contraseña">
                         </div>
                         <!-- contenedor campos */-->
                     </div>
                     <div class="alinear-derecha flex">
                         <input class="boton w-sm-100" type="submit" value="Aceptar">
-                        <input class="boton w-sm-100" type="submit" value="Consultar">
+                        <input class="boton w-sm-100" type="submit" value="Cancelar">
 
                     </div>
                 </fieldset>
@@ -52,7 +52,7 @@
 </body>
 
 <footer class="footer">
-    <p>todos los derechso reservados. CAMFSHOP</p>
+    <p>todos los derechos reservados. CLAMFSHOP</p>
 </footer>
 
 </html>

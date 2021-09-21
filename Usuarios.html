@@ -33,36 +33,36 @@
     <main class="contenedor">
 
         <section>
-            <form class="formulario">
+            <form action="DATABASE/conexion_modulo.php" class="formulario" method="POST">
                 <fieldset>
                     <div class="contenedor-campos">
                         <div class="campo">
                             <label>Cedula </label>
-                            <input class="input-text" type="text" placeholder="Tu Nombre">
+                            <input class="input-text" name="Cedula" type="text" placeholder="Tu Cedula">
                         </div>
                         <div class="campo">
                             <label>Usuario </label>
-                            <input class="input-text" type="tel" placeholder="Tu Telefono">
+                            <input class="input-text" name="Usuario" type="tel" placeholder="Tu Usuario">
                         </div>
                         <div class="campo">
                             <label>Nombre Completo</label>
-                            <input class="input-text" type="email" placeholder="Tu Correo">
+                            <input class="input-text" name="NombreCompleto" type="text" placeholder="Tu Nombre Completo">
                         </div>
                         <div class="campo">
                             <label>Contraseña </label>
-                            <input class="input-text" type="email" placeholder="Tu Correo">
+                            <input class="input-text" name="Contraseña" type="password" placeholder="Tu Contraseña">
                         </div>
                         <div class="campo">
                             <label>Correo Electronico </label>
-                            <input class="input-text" type="email" placeholder="Tu Correo">
+                            <input class="input-text" name="CorreoElectronico" type="email" placeholder="Tu Correo">
                         </div>
                         <!-- contenedor campos */-->
                     </div>
                     <div class="alinear-derecha flex">
-                        <input class="boton w-sm-100" type="submit" value="Consultar">
-                        <input class="boton w-sm-100" type="submit" value="Crear">
-                        <input class="boton w-sm-100" type="submit" value="Actualizar">
-                        <input class="boton w-sm-100" type="submit" value="Borrar">
+                        <input class="boton w-sm-100" type="submit" name="Consultar" value="Consultar">
+                        <input class="boton w-sm-100" type="submit" name="Crear" value="Crear">
+                        <input class="boton w-sm-100" type="submit" name= "Validar" value="Actualizar">
+                        <input class="boton w-sm-100" type="submit" name="Borrar" value="Borrar">
                     </div>
                 </fieldset>
             </form>
