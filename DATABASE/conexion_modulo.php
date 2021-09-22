@@ -25,7 +25,7 @@ echo('</pre>');
   	if ($_POST['Consultar']) {
          	for ($i=0; $i < lenght($array); $i++) { 
          		if ($cedula=$array[i]) {
-         			
+         			  $consulta= "SELECT `Usuario`, `Contraseña`, `cedula`, `NombreCompleto`, `CorreoElectronico` FROM `prueba` WHERE 1";
          		}
          	}
         
@@ -36,24 +36,16 @@ echo('</pre>');
 			$array=mysqli_fetch_array($query);
      }
 	elseif ($_POST['Validar']) {
-          Echo "Se ha pulsado el botón validar";
+                for ($i=0; $i < lenght($array); $i++) { 
+            if ($cedula=$array[i]) {
+                $consulta= "SELECT `Usuario`, `Contraseña`, `cedula`, `NombreCompleto`, `CorreoElectronico` FROM `prueba` WHERE 1";
+            }
      }
 	elseif ($_POST['Borrar']) {
-          Echo "Se ha pulsado el botón borrar";
+          DELETE FROM `prueba` WHERE 0 `Usuario``Contraseña``cedula``NombreCompleto``CorreoElectronico`
      }
 	
 	
 
-	if ($Usuario == $array[0]) {
-  		if ($Contraseña==$array[1]) {
-  			echo "Bienvenido";
-  		}
-  		else{
-  			echo "Contraseña incorrecta";
-  		}
-	}
-	else{
-		echo "Usuario incorrecto";
-	}
 
 ?>
