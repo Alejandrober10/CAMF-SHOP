@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLAMFSHOP</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:ital,wght@0,700;1,400&display=swap');
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+     <header class="header">
+            <div class="contenedor header-contenedor">
+                <a class="" href="index.html">
+                    <h2 class="header--contenedor-a">CLAMF<span class="header--contenedor-b">SHOP</span></h2>
+                </a>
+                <nav class="navegacion">
+                    <a href="Usuarios.html" class="navegacion__enlace">Usuarios</a>
+                    <a href="Clientes.html" class="navegacion__enlace">Clientes</a>
+                    <a href="Proveedores.html" class="navegacion__enlace">Proovedores</a>
+                    <a href="Productos.html" class="navegacion__enlace">Productos</a>
+                    <a href="Ventas.html" class="navegacion__enlace">Ventas</a>
+                    <a href="Reportes.html" class="navegacion__enlace">Reportes</a>
+                </nav>
+            </div>
+     </header>
+
+     <br>
+    <main class="contenedor">
+
+        <section>
+            <form action="DATABASE/conexion_modulo.php" class="formulario" method="POST">
+                <fieldset>
+                    <div class="columna-4">
+                        <div class="campo1">
+                            <label>Cedula </label>
+                            <input class="input-text" name="Cedula" type="text" placeholder="Tu Cedula">
+                            <input class="boton w-sm-100" type="submit" name="Consultar" value="Consultar">
+                        </div>
+                        <div class="campo1">
+                            <label>Cliente </label>
+                            <input class="input-text" name="Cedula" type="text" placeholder="Cliente">
+                        </div>
+                        <div class="campo1">
+                            <label>Consecutivo</label>
+                            <input class="input-text" name="NombreCompleto" type="text" placeholder="Consecutivo">
+                        </div>
+                        <!-- contenedor campos */-->
+                    </div>
+                    <div class="columna-4">
+                        <div class="campo1">
+                            <label>Cod. Producto </label>
+                            <input class="input-text" name="Cedula" type="text" placeholder="Producto">
+                            <input class="boton w-sm-100" type="submit" name="Consultar" value="Consultar">
+                            <input class="input-text" name="Cedula" type="text" placeholder="Producto">
+                            <input class="boton w-sm-100" type="submit" name="Consultar" value="Consultar">
+                            <input class="input-text" name="Cedula" type="text" placeholder="Producto">
+                            <input class="boton w-sm-100" type="submit" name="Consultar" value="Consultar">
+                        </div>
+                        <div class="campo1">
+                            <div class="">
+                                <label>Nombre Producto </label>
+                            </div>
+                            <div class="alinear-derecha">
+                                <input class="input-text" name="Cedula" type="text" placeholder="Producto">
+                                <input class="input-text" name="Cedula" type="text" placeholder="Cantidad">
+                                <input class="input-text" name="Cedula" type="text" placeholder="Producto">
+                                <input class="input-text" name="Cedula" type="text" placeholder="Cantidad">
+                                <input class="input-text" name="Cedula" type="text" placeholder="Producto">
+                                <input class="input-text" name="Cedula" type="text" placeholder="Cantidad">
+                            </div>
+                        </div>
+                        <div class="campo1">
+                            <label>Valor total</label>
+                            <input class="input-text" name="NombreCompleto" type="text" placeholder="Valor total">
+                            <input class="input-text" name="NombreCompleto" type="text" placeholder="Valor total">
+                            <input class="input-text" name="NombreCompleto" type="text" placeholder="Valor total">
+                        </div>
+                        <!-- contenedor campos */-->
+                    </div>
+                                    <div class="columna-4">
+                        <div class="campo1">
+
+                        </div>
+                        <div class="campo1">
+                            <input class="boton w-sm-100" type="submit" name="Consultar" value="Confirmar">
+                        </div>
+                        <div class="campo1">
+                                <div class="alinear-derecha">
+                                    <label>Total Venta</label>
+                                    <input class="input-text" name="Cedula" type="text" placeholder="total">
+                                    <label>Total IVA</label>
+                                    <input class="input-text" name="Cedula" type="text" placeholder="total">
+                                    <label>Total con IVA</label>
+                                    <input class="input-text" name="Cedula" type="text" placeholder="total">
+                            </div>
+                        </div>
+                        <!-- contenedor campos */-->
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+
+    </main>
+
+
+</body>
+
+<footer class="footer">
+    <p>todos los derechos reservados. CLAMFSHOP</p>
+</footer>
+
+</html>

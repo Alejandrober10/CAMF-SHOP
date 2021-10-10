@@ -21,14 +21,11 @@ public class User {
 	@Column(nullable = false, length = 64)
 	private String password;
 	
-	@Column(name = "first_name", nullable = false, length = 20)
-	private String firstName;
+	@Column(name = "nombre_completo", nullable = false, length = 20)
+	private String nombreCompleto;
 	
-	@Column(name = "last_name", nullable = false, length = 20)
-	private String lastName;
-
-	@Column(name = "Cedula", nullable = false, length = 20)
-	private String cedula;
+	@Column(name = "usuario", nullable = false, length = 20)
+	private String Usuario;
 
 	public Long getId() {
 		return id;
@@ -54,20 +51,20 @@ public class User {
 		this.password = password;
 	}
 
-	public String getFirstName() {
-		return firstName;
+	public String getNombreCompleto() {
+		return nombreCompleto;
 	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setNombreCompleto(String nombreCompleto) {
+		this.nombreCompleto = nombreCompleto;
 	}
 
-	public String getLastName() {
-		return lastName;
+	public String getUsuario() {
+		return Usuario;
 	}
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setUsuario(String usuario) {
+		Usuario = usuario;
 	}
 
 	public String getCedula() {
@@ -78,7 +75,10 @@ public class User {
 		this.cedula = cedula;
 	}
 
+	@Column(name = "Cedula", nullable = false, length = 20)
+	private String cedula;
 
+	
 	
 	
 	

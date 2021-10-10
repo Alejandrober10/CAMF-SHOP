@@ -1,47 +1,87 @@
 
-
-
 <!DOCTYPE html>
-<html lang="en">
+<html  xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>CLAMFSHOP</title>
-	<link rel="stylesheet" href="css/normalize.css">
-	<style>
-		@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:ital,wght@0,700;1,400&display=swap');
-	</style>
-	<link rel="stylesheet" href="css/style.css">
+    <meta charset="ISO-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLAMFSHOP</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:ital,wght@0,700;1,400&display=swap');
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+	<script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-<header class="header">
-	<div class="contenedor header-contenedor">
-		<a class="" href="index.html">
-			<h2 class="header--contenedor-a">CLAMF<span class="header--contenedor-b">SHOP</span></h2>
-		</a>
+     <header class="header">
+            <div class="contenedor header-contenedor">
+                <a class="" href="index.html">
+                    <h2 class="header--contenedor-a">CLAMF<span class="header--contenedor-b">SHOP</span></h2>
+                </a>
+                <nav class="navegacion">
+                    <a href="Usuarios.html" class="navegacion__enlace">Usuarios</a>
+                    <a href="Clientes.html" class="navegacion__enlace">Clientes</a>
+                    <a href="Proveedores.html" class="navegacion__enlace">Proovedores</a>
+                    <a href="#" class="navegacion__enlace">Productos</a>
+                    <a href="#" class="navegacion__enlace">Ventas</a>
+                    <a href="#" class="navegacion__enlace">Reportes</a>
+                </nav>
+            </div>
+     </header>
 
-	</div>
-</header>
+     <br>
+    <main class="contenedor">
 
-<main class="contenedor">
-	<br>
-	<section align="center">
-		<h1>Welcome to CLAMFSHOP </h1>
-		<h3  ><a th:href="@{/users}">List of Users</a></h3>
-		<h3><a th:href="@{/register}">Register</a></h3>
-		<h3><a th:href="@{/login}">Login</a></h3>
+        <section>
+            <form th:action="@{/process_register}" th:object="${user}" 
+			method="POST" class="formulario">
+                <fieldset>
+                    <div class="contenedor-campos">
+                        <div class="campo">
+                            <label>Cedula </label>
+                            <input class="input-text" name="Cedula" th:field="*{cedula}"  required type="text" placeholder="Tu Cedula">
+                        </div>
+                        <div class="campo">
+                            <label>Usuario </label>
+                            <input class="input-text" th:field="*{usuario}"  required name="Usuario" type="tel" placeholder="Tu Usuario">
+                        </div>
+                        <div class="campo">
+                            <label>Nombre Completo</label>
+                            <input type="text" th:field="*{nombreCompleto}"  required class="input-text" name="NombreCompleto" placeholder="Tu Nombre Completo">
+                        </div>
+                        <div class="campo">
+                            <label>Contraseña </label>
+                            <input class="input-text" th:field="*{password}" required name="Contraseña" type="password" placeholder="Tu Contraseña">
+                        </div>
+                        <div class="campo">
+                            <label>Correo Electronico </label>
+                            
+                            <input class="input-text" th:field="*{email}" name="email" type="email" placeholder="Tu Correo">
+                        </div>
+                        
+                        <!-- contenedor campos */-->
+                    </div>
+                    <div class="container center-h center-v" style="text-align: center;">
+                        
+                        <input class="boton w-sm-100" type="submit" name="Crear" value="Crear" al>
+                        
+                    </div>
+                </fieldset>
+            </form>
+        </section>
 
-
-	</section>
-</main>
+    </main>
 
 
 </body>
 
 <footer class="footer">
-	<p>todos los derechos reservados. CLAMFSHOP</p>
+    <p>todos los derechos reservados. CLAMFSHOP</p>
 </footer>
 
 </html>

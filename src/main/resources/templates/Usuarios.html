@@ -1,10 +1,8 @@
-
 <!DOCTYPE html>
-<html  xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 
 <head>
-    <meta charset="ISO-8859-1">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CLAMFSHOP</title>
     <link rel="stylesheet" href="css/normalize.css">
@@ -12,9 +10,6 @@
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:ital,wght@0,700;1,400&display=swap');
     </style>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
-	<script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
-	<script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -27,9 +22,9 @@
                     <a href="Usuarios.html" class="navegacion__enlace">Usuarios</a>
                     <a href="Clientes.html" class="navegacion__enlace">Clientes</a>
                     <a href="Proveedores.html" class="navegacion__enlace">Proovedores</a>
-                    <a href="#" class="navegacion__enlace">Productos</a>
-                    <a href="#" class="navegacion__enlace">Ventas</a>
-                    <a href="#" class="navegacion__enlace">Reportes</a>
+                    <a href="Productos.html" class="navegacion__enlace">Productos</a>
+                    <a href="Ventas.html" class="navegacion__enlace">Ventas</a>
+                    <a href="Reportes.html" class="navegacion__enlace">Reportes</a>
                 </nav>
             </div>
      </header>
@@ -38,38 +33,36 @@
     <main class="contenedor">
 
         <section>
-            <form th:action="@{/process_register}" th:object="${user}" 
-			method="POST" class="formulario">
+            <form action="DATABASE/conexion_modulo.php" class="formulario" method="POST">
                 <fieldset>
                     <div class="contenedor-campos">
                         <div class="campo">
                             <label>Cedula </label>
-                            <input class="input-text" name="Cedula" th:field="*{cedula}"  required type="text" placeholder="Tu Cedula">
+                            <input class="input-text" name="Cedula" type="text" placeholder="Tu Cedula">
                         </div>
                         <div class="campo">
                             <label>Usuario </label>
-                            <input class="input-text" th:field="*{usuario}"  required name="Usuario" type="tel" placeholder="Tu Usuario">
+                            <input class="input-text" name="Usuario" type="tel" placeholder="Tu Usuario">
                         </div>
                         <div class="campo">
                             <label>Nombre Completo</label>
-                            <input type="text" th:field="*{nombreCompleto}"  required class="input-text" name="NombreCompleto" placeholder="Tu Nombre Completo">
+                            <input class="input-text" name="NombreCompleto" type="text" placeholder="Tu Nombre Completo">
                         </div>
                         <div class="campo">
                             <label>Contraseña </label>
-                            <input class="input-text" th:field="*{password}" required name="Contraseña" type="password" placeholder="Tu Contraseña">
+                            <input class="input-text" name="Contraseña" type="password" placeholder="Tu Contraseña">
                         </div>
                         <div class="campo">
                             <label>Correo Electronico </label>
-                            
-                            <input class="input-text" th:field="*{email}" name="email" type="email" placeholder="Tu Correo">
+                            <input class="input-text" name="CorreoElectronico" type="email" placeholder="Tu Correo">
                         </div>
-                        
                         <!-- contenedor campos */-->
                     </div>
-                    <div class="container center-h center-v" style="text-align: center;">
-                        
-                        <input class="boton w-sm-100" type="submit" name="Crear" value="Crear" al>
-                        
+                    <div class="alinear-derecha flex">
+                        <input class="boton w-sm-100" type="submit" name="Consultar" value="Consultar">
+                        <input class="boton w-sm-100" type="submit" name="Crear" value="Crear">
+                        <input class="boton w-sm-100" type="submit" name= "Validar" value="Actualizar">
+                        <input class="boton w-sm-100" type="submit" name="Borrar" value="Borrar">
                     </div>
                 </fieldset>
             </form>

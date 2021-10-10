@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLAMFSHOP</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:ital,wght@0,700;1,400&display=swap');
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+      <header class="header">
+            <div class="contenedor header-contenedor">
+                <a class="" href="index.html">
+                    <h2 class="header--contenedor-a">CLAMF<span class="header--contenedor-b">SHOP</span></h2>
+                </a>
+                <nav class="navegacion">
+                    <a href="Usuarios.html" class="navegacion__enlace">Usuarios</a>
+                    <a href="Clientes.html" class="navegacion__enlace">Clientes</a>
+                    <a href="Proveedores.html" class="navegacion__enlace">Proovedores</a>
+                    <a href="Productos.html" class="navegacion__enlace">Productos</a>
+                    <a href="Ventas.html" class="navegacion__enlace">Ventas</a>
+                    <a href="Reportes.html" class="navegacion__enlace">Reportes</a>
+                </nav>
+            </div>
+     </header>
+
+    <main class="contenedor">
+        <br>
+        <section>
+            <form action="DATABASE/conexion_login.php" class="formulario" method="POST">
+                <fieldset>
+                    <div class="contenedor">
+                        <div class="campo">
+                            <label>NOMBRE DEL ARCHIVO:</label>
+                            <input class="input-text" name="Usuario" type="text" placeholder="">
+                    <div class="alinear-derecha">
+                        <input class="boton w-sm-100" type="submit" value="EXAMINAR">
+                        <input class="boton w-sm-100" type="submit" value="CARGAR">
+                    </div>
+                        </div>
+                        <!-- contenedor campos */-->
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+
+</body>
+
+<footer class="footer">
+    <p>todos los derechos reservados. CLAMFSHOP</p>
+</footer>
+
+</html>

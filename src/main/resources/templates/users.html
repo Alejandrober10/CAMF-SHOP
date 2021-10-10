@@ -27,16 +27,19 @@
 				<tr>
 					<th>User ID</th>
 					<th>E-mail</th>
-					<th>First Name</th>
-					<th>Last Name</th>
+					<th>Name</th>
+					<th>Usuario</th>
+					<th>cedula</th>
+					
 				</tr>
 			</thead>
 			<tbody>
 				<tr th:each="user: ${listUsers}">
 					<td th:text="${user.id}">User ID</td>
 					<td th:text="${user.email}">E-mail</td>
-					<td th:text="${user.firstName}">First Name</td>
-					<td th:text="${user.lastName}">Last Name</td>
+					<td th:text="${user.nombreCompleto}">First Name</td>
+					<td th:text="${user.Usuario}">Last Name</td>
+					<td th:text="${user.cedula}">Last Name</td>
 				</tr>
 			</tbody>
 		</table>
